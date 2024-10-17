@@ -12,16 +12,20 @@
       <hr>
       <table>
         <tr>
-          <td> Username
+          <td> Username </td>
           <td><input size=20 type="text" name="username" /></td>
+        </tr>
+        <tr>
           <td>Password</td>
-          <td><input type=password name=password size=20></td>
+          <td><input type="password" name="password" size="20" /></td>
+        </tr>
         <tr>
           <td> Ulangi Password</td>
-          <td><input type=password name=password2 size=20>
+          <td><input type="password" name="password2" size="20">
+        </tr>
       </table>
       <hr>
-      <input type=submit value=Simpan> <input type=reset value=Reset>
+      <input type="submit" value="Simpan"> <input type="reset" value="Reset" />
       <br>
       <a href="login.php">Kembali Login</a>
     </form>

@@ -1,10 +1,9 @@
-
 <!--Halaman Login-->
 <html>
 <center>
-<h1>FORM LOGIN</h1>
-<hr>
-    <form action="tambah_berita.php" method="post">
+    <h1>FORM LOGIN</h1>
+    <hr>
+    <form action="proses_login.php" method="post">
         <table>
             <tr>
                 <td>Username</td>
@@ -19,15 +18,15 @@
         <input type="submit" value="LOGIN">
         <a href="daftar_admin.php">Daftar</a>
     </form>
-    <?php 
-        if (!empty($_GET["pesan"])) {
-            //jika pesan gagal
-            if ($_GET["pesan"] == "gagal") {
-                echo "<p>Username dan Password wajib diisi</p>";
-            } else if ($_GET["pesan"] == "tidak_cocok") {
-                echo "<p>Username dan Password tidak cocok</p>";
-            }
+    <?php
+    if (!empty($_GET["pesan"])) {
+        //jika pesan gagal
+        if ($_GET["pesan"] == "gagal") {
+            echo "<p>Username dan Password wajib diisi</p>";
+        } else if ($_GET["pesan"] == "tidak_cocok") {
+            echo "<p>Username dan Password tidak cocok</p>";
         }
+    }
     ?>
 </center>
 

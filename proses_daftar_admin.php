@@ -1,6 +1,6 @@
 <?php
 //import file config untuk koneksi ke database   
-require('dbconfig.php');
+require('db.php');
 
 $username = $_POST['username'];
 $password = $_POST['password'];
@@ -22,8 +22,7 @@ if ($password != $password2) {
 }
 
 //cek username   
-$data = mysqli_query($mysqli, "select * from admin where username='$use
- rname'");
+$data = mysqli_query($mysqli, "select * from pengguna where username='$username'");
 $cek = mysqli_num_rows($data);
 
 //Jika username sudah terdaftar makan kembali ke form pendaftaran   
@@ -36,7 +35,7 @@ $password_new = sha1($password);
 //   
 $result = mysqli_query(
   $mysqli,
-  "INSERT INTO `admin` (`username`, `password`) VALUES ('$username','$password_new');"
+  "INSERT INTO `pengguna` (`username`, `password`) VALUES ('$username','$password_new');"
 );
 
 if ($result) {
