@@ -1,4 +1,4 @@
-. <?php
+<?php
 include "koneksi.php";
 
 $link = koneksi_db();
