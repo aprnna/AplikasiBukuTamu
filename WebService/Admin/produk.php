@@ -1,5 +1,5 @@
 <?php
-include '../koneksi.php';
+include './koneksi.php';
 
 // Menampilkan dalam format JSON 
 header('Content-Type: application/json');
@@ -20,7 +20,7 @@ if ($result->num_rows > 0) {
 
   $produk = array();
   while ($row = $result->fetch_assoc()) {
-    $row["foto"] = "http://localhost/tokoberkah/admin/image/" . $row["foto"];
+    $row["foto"] = "http://localhost/Matkul-Penerapan-Teknologi-Internet/WebService/Admin/image/" . $row["foto"];
     array_push($produk, $row);
   }
   $res["data"] = $produk;
