@@ -40,7 +40,7 @@ CREATE TABLE `produk` (
 -- Dumping data untuk tabel `produk`
 --
 
-INSERT INTO `produk` (`foto`, `nama_produk`, `harga`) VALUES
+INSERT INTO `produk` (`id_produk`, `nama_produk`, `harga`, `foto`) VALUES
 (1, 'Sweater Polos Basic High Quality Distro Hitam', 50000, 'baju1.jpg'),
 (2, 'Sweater Polos Basic High Quality Distro Army', 79000, 'baju2.jpg'),
 (3, 'Sweater Polos Basic High Quality Distro Cream', 99000, 'baju3.jpg'),
