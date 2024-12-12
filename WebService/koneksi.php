@@ -1,4 +1,3 @@
-.
 <?php
 function koneksi_db()
 {
