@@ -1,5 +1,5 @@
  <?php
-  include '../koneksi.php';
+  include './koneksi.php';
 
   //Query 
   var_dump($_GET['id']);
