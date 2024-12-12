@@ -34,8 +34,7 @@ include 'koneksi.php';
     $foto = basename($_FILES["foto"]["name"]);
     if (move_uploaded_file($_FILES["foto"]["tmp_name"], $target_file)) {
       //Simpan ke database 
-      $sql = "INSERT INTO produk (nama_produk, foto, harga) VALUES ('$nama_produk', '$foto', 
-'$harga')";
+      $sql = "INSERT INTO produk (nama_produk, foto, harga) VALUES ('$nama_produk', '$foto', '$harga')";
       if ($conn->query($sql) === TRUE) {
         header('Location: ' . getBaseUrl());
       }

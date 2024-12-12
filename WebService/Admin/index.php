@@ -16,7 +16,7 @@ include 'koneksi.php';
     $sql = "DELETE FROM produk WHERE id_produk = " . $_GET["hapus"];
     if ($conn->query($sql) === TRUE) {
       // Mengalihkan halaman 
-      header("Location: http://localhost/tokoberkah/admin");
+      header("Location: http://localhost/Matkul-Penerapan-Teknologi-Internet/WebService/Admin");
     }
   }
   ?>
