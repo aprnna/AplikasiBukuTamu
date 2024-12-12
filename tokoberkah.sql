@@ -30,9 +30,10 @@ USE `tokoberkah`;
 --
 
 CREATE TABLE `produk` (
-  `foto` text NOT NULL,
-  `nama_produk` text NOT NULL,
-  `harga` float NOT NULL
+  `id_produk` INT(11) NOT NULL,
+  `nama_produk` VARCHAR(50) NOT NULL,
+  `harga` INT(11) NOT NULL,
+  `foto` VARCHAR(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -40,10 +41,30 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`foto`, `nama_produk`, `harga`) VALUES
-('baju1.jpg', 'Sweater Polos Basic High Quality Distro Hitam', 50000),
-('baju2.jpg', 'Sweater Polos Basic High Quality Distro Army', 79000),
-('baju3.jpg', 'Sweater Polos Basic High Quality Distro Cream', 99000),
-('baju4.jpg', 'Sweater Polos Basic High Quality Distro Grey', 65000);
+(1, 'Sweater Polos Basic High Quality Distro Hitam', 50000, 'baju1.jpg'),
+(2, 'Sweater Polos Basic High Quality Distro Army', 79000, 'baju2.jpg'),
+(3, 'Sweater Polos Basic High Quality Distro Cream', 99000, 'baju3.jpg'),
+(4, 'Sweater Polos Basic High Quality Distro Grey', 65000, 'baju4.jpg');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `produk`
+--
+ALTER TABLE `produk`
+  ADD PRIMARY KEY (`id_produk`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `produk`
+--
+ALTER TABLE `produk`
+  MODIFY `id_produk` INT(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
