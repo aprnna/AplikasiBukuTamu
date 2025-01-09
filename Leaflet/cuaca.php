@@ -18,7 +18,7 @@
         var apiKey = '178870f30a6ed00540261c479454f9ce';
 
         function getWeatherData(cityName) {
-            var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+            var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Bandung&appid=${apiKey}`;
             fetch(apiUrl)
                 .then(response => response.json())
                 .then(data => {
@@ -42,6 +42,7 @@
                     fetch(apiUrl)
                         .then(response => response.json())
                         .then(data => {
+                            console.log(data);
                             var location = data.address.suburb || data.address.village || data.address.town;
                             getWeatherData(location);
                             map.setView([lat, lon], 14);
